@@ -5,99 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maina</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
     <link href="./style.css" rel="stylesheet">
 </head>
 <body>
     <section class="hero">
         <div class="container">
+            <!-- Hero section introducing the profile with a personalized greeting -->
             <h1 class="header">Welcome to My Profile</h1>
-            <p>👋 Hello! I'm a student at <strong>JKUAT</strong>, pursuing a <strong>BSc in IT</strong>. Here are a few things about me:</p>
-            <ul>
-                <li><strong>💻 Programming Languages:</strong> Rust, C, C++, JavaScript, Python</li>
-                <li><strong>🔍 Current Interests:</strong> Experimenting with LLMs, specifically agents</li>
-                <li><strong>⚙️ Hobbies:</strong> Tinkering with electronics, playing online chess</li>
-            </ul>
-            <button class="button">Learn More</button>
+            <p id="greeting"></p>
+            <p>I'm a student at <strong>JKUAT</strong>, pursuing a <strong>BSc in IT</strong>. Here are a few things about me:</p>
+            <div class="collapsible">
+                <!-- List of programming languages, interests, and hobbies -->
+                <ul>
+                    <li><strong>💻 Programming Languages:</strong> Rust, C, C++, JavaScript, Python</li>
+                    <li><strong>🔍 Current Interests:</strong> Experimenting with LLMs, specifically agents</li>
+                    <li><strong>⚙️ Hobbies:</strong> Tinkering with electronics, playing online chess</li>
+                </ul>
+            </div>
+            <button class="button" id="learnMoreButton">Learn More</button>
         </div>
     </section>
+    
     <section class="skills">
         <div class="container">
-            <h2 class="header">My Skills</h2>
+            <!-- Skills section showcasing proficiency in various programming languages and web development technologies -->
+            <h2 class="header">Skills</h2>
+            
             <div class="card">
+                <!-- Card for programming languages with proficiency percentages -->
                 <h3>Programming Languages</h3>
                 <ul>
-                    <li>Rust - 50%</li>
-                    <li>C - 70%</li>
-                    <li>C++ - 60%</li>
-                    <li>JavaScript - 80%</li>
-                    <li>Python - 75%</li>
+                    <li>🦀 Rust - 50%</li>
+                    <li>｡🇯‌🇸‌ JavaScript - 80%</li>
+                    <li>🐍 Python - 75%</li>
                 </ul>
             </div>
+    
             <div class="card">
+                <!-- Card for web development skills with proficiency percentages -->
                 <h3>Web Development</h3>
                 <ul>
-                    <li>HTML - 90%</li>
-                    <li>CSS - 85%</li>
-                    <li>JavaScript - 80%</li>
-                    <li>React - 70%</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Machine Learning</h3>
-                <ul>
-                    <li>Python - 75%</li>
-                    <li>TensorFlow - 60%</li>
-                    <li>PyTorch - 55%</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Databases</h3>
-                <ul>
-                    <li>MySQL - 70%</li>
-                    <li>PostgreSQL - 65%</li>
-                    <li>MongoDB - 60%</li>
+                    <li>#️⃣ HTML and CSS - 90%</li>
+                    <li>｡🇯‌🇸‌ JavaScript - 80%</li>
+                    <li>⚛️ React - 70%</li>
                 </ul>
             </div>
         </div>
     </section>
+    
     <section class="projects">
         <div class="container">
             <h2 class="header">Projects</h2>
             <div class="project-grid">
+
                 <div class="project-item">
                     <div class="project-details">
-                        <i class="icon">📁</i>
-                        <h3>Project 1</h3>
-                        <p>Description of project 1.</p>
+                        <div class="project-header">
+                            <div>
+                                📂
+                            </div>
+                            <div>
+                                <h3>Project</h3>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book.
+                                </p>
+
+                            </div>
+                    </div>
                     </div>
                 </div>
                 <div class="project-item">
                     <div class="project-details">
-                        <i class="icon">📁</i>
-                        <h3>Project 2</h3>
-                        <p>Description of project 2.</p>
+                        <div class="project-header">
+                            <div>
+                                📂
+                            </div>
+                            <div>
+                                <h3>Project</h3>
+                                <p>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book.
+                                </p>
+
+                            </div>
                     </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-details">
-                        <i class="icon">📁</i>
-                        <h3>Project 3</h3>
-                        <p>Description of project 3.</p>
-                    </div>
-                </div>
-                <div class="project-item">
-                    <div class="project-details">
-                        <i class="icon">📁</i>
-                        <h3>Project 4</h3>
-                        <p>Description of project 4.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-</body>
-<footer>
+    <section class="newsletter">
+        <div class="container">
+            <h2>Reach out for a quote</h2>
+            <form id="newsletterForm">
+                <div class="name-section">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                </div>
+                <div class="email-section">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                </div>
+                <button type="submit" class="quote-button">Submit</button>
+                <p id="error" style="color: red; display: none;">Please fill out both fields with valid information.</p>
+            </form>
+        </div>
+    </section>
+    <script src="./script.js"></script>
 
+</body>
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Maina's Portfolio. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="https://github.com/maina-kamau" target="_blank">GitHub</a></li>
+        </ul>
+    </div>
 </footer>
 </html>
